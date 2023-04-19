@@ -1,15 +1,15 @@
 const { Router } = require("express");
 
-const { getTask, saveTask, updateTask, deleteTask} = require("../controllers/taController");
+const { getTA, saveTA, updateTA, deleteTA} = require("../controllers/taController");
 
 const router = Router();
 
-router.get("/ta", getTask);
-/*
-router.post("/ta/save", saveTask);
+router.get("/ta", getTA);
 
-router.post('/ta/update', updateTask);
+router.post("/ta/save", saveTA);
 
-router.post('/ta/delete', deleteTask)*/
+router.post('/ta/update', updateTA);
+
+router.post('/ta/delete', deleteTA)
 
 module.exports = router;

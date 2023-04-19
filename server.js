@@ -7,6 +7,7 @@ const cors = require("cors");
 
 const taskRoute = require("./routes/taskRoute");
 const ActivityRoute = require("./routes/ActivityRoute");
+const TaRoute = require("./routes/taRoute")
 
 const app = express();
 const PORT = process.env.PORT | 5000;
@@ -23,6 +24,6 @@ mongoose
     .catch((err) => console.error(err));
 
 // Routes
-app.use(taskRoute, ActivityRoute);
+app.use(taskRoute, ActivityRoute, TaRoute);
 
 app.listen(PORT, () => console.log("Server running on port " + PORT));

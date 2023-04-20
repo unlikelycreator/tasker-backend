@@ -1,4 +1,4 @@
-const { Router } = require("express");
+/*const { Router } = require("express");
 
 const { getTA, saveTA, updateTA, deleteTA} = require("../controllers/taController");
 
@@ -12,4 +12,4 @@ router.post('/ta/update', updateTA);
 
 router.post('/ta/delete', deleteTA)
 
-module.exports = router;
+module.exports = router;*/

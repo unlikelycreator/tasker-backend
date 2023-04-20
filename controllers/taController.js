@@ -1,4 +1,4 @@
-const {Ta} = require('../models/taskModels')
+/*const {Ta} = require('../models/taskModels')
 
 module.exports.getTA = async (req, res) =>{
     const text = await Ta.find()
@@ -31,4 +31,4 @@ module.exports.deleteTA = async (req,res) =>{
     .then(() => res.send("Deleted Successfully..."))
     .catch((err) => console.log(err))
 }
-
+*/

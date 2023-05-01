@@ -6,9 +6,9 @@ module.exports.getTask = async (req, res) =>{
 }
 
 module.exports.saveTask = async (req, res) => {
-    const {text, selectedOptions} = req.body
+    const {text, selectedItems} = req.body
      Task
-     .create({text, selectedOptions})
+     .create({text, selectedItems})
      .then((data) => { 
         console.log("Added Successfully..");
         console.log(data);
@@ -17,8 +17,8 @@ module.exports.saveTask = async (req, res) => {
 }
 
 module.exports.updateTask = async (req,res) =>{
-    const{_id, text, selectedOptions} = req.body
-    Task.findByIdAndUpdate(_id, { text, selectedOptions }, { new: true })
+    const{_id, text, selectedItems} = req.body
+    Task.findByIdAndUpdate(_id, { text, selectedItems }, { new: true })
     .then((updatedTask) => res.send(updatedTask))
     .catch((err) => console.log(err))
 }

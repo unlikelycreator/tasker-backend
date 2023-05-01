@@ -1,18 +1,18 @@
 // Requiring module
 const mongoose = require('mongoose');
 const selectedOptionsSchema = new mongoose.Schema({
-    text: { type: String }
+    text: { type: String, default: undefined},
   });
   
 // Course Modal Schema
 const TaskSchema = new mongoose.Schema({
     text: {type: String},
-    selectedOptions: [selectedOptionsSchema]
+    selectedItems: [selectedOptionsSchema],
 });
     
 // Student Modal Schema
 const ActivitySchema = new mongoose.Schema({
-    text: String,
+    text: { type: String }
 });
 /*
 const selectedTaskSchema = new mongoose.Schema({

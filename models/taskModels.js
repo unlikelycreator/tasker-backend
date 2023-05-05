@@ -20,12 +20,24 @@ const selectedTaskSchema = new mongoose.Schema({
     selectedOptions: [selectedOptionsSchema]
  });*/
 
+ const ItemSchema = new mongoose.Schema({
+    itemName: {
+      type: String,
+    },
+    itemDescription: {
+      type: String,
+    },
+    itemPrice: {
+      type: Number,
+    }
+  });
+  
 // Creating model objects
 const Task = mongoose.model('Task', TaskSchema);
 const Activity = mongoose.model('Activity', ActivitySchema);
-//const Ta = mongoose.model('Ta',selectedTaskSchema)
+const Item = mongoose.model('Item',ItemSchema)
     
 // Exporting our model objects
 module.exports = {
-    Task, Activity
+    Task, Activity, Item
 }

@@ -32,12 +32,21 @@ const selectedTaskSchema = new mongoose.Schema({
     }
   });
   
+  const CustomerSchema = new mongoose.Schema({
+    name: {
+      type: String,
+    },
+    address: {
+      type: String,
+    }
+  });
+
 // Creating model objects
 const Task = mongoose.model('Task', TaskSchema);
 const Activity = mongoose.model('Activity', ActivitySchema);
 const Item = mongoose.model('Item',ItemSchema)
-    
+const Customer = mongoose.model('Customer', CustomerSchema)
 // Exporting our model objects
 module.exports = {
-    Task, Activity, Item
+    Task, Activity, Item, Customer
 }

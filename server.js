@@ -24,7 +24,7 @@ mongoose
     .then(() => console.log("Mongodb Connected..."))
     .catch((err) => console.error(err));
 
-// Routes
-app.use(taskRoute, ActivityRoute, ItemRoute,CustomerRoute, InvoiceRoute);
+// Routes 
+app.use(taskRoute, ActivityRoute, ItemRoute, CustomerRoute, InvoiceRoute);
 
 app.listen(PORT, () => console.log("Server running on port " + PORT));
